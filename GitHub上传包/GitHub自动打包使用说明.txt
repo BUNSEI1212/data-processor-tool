@@ -1,0 +1,120 @@
+# GitHub Actions 自动打包 Mac 应用 - 详细步骤 🚀
+
+## 📁 当前文件包含：
+✅ 代码.py - 主程序源码
+✅ app_icon.png - 应用图标
+✅ README.md - 项目说明
+✅ .github/workflows/build-mac.yml - 自动构建脚本
+
+## 🎯 目标
+通过GitHub的免费云服务，自动为Mac用户生成：
+- 数据处理工具.app (Mac应用程序)  
+- 数据处理工具_Mac版.dmg (Mac安装包)
+
+## 🚀 详细操作步骤
+
+### 第1步：创建GitHub仓库
+1. 打开浏览器，访问 https://github.com
+2. 如果没有账号，先注册一个（免费）
+3. 登录后，点击右上角的 "+" 按钮
+4. 选择 "New repository"
+5. 填写信息：
+   - Repository name: data-processor-tool
+   - Description: 专业的数据格式化处理工具
+   - 设置为 Public（必须，免费账户才能使用Actions）
+   - 勾选 "Add a README file"
+6. 点击 "Create repository"
+
+### 第2步：上传文件
+方法A - 网页拖拽上传（推荐）：
+1. 在新建的仓库页面，点击 "uploading an existing file"
+2. 拖拽以下文件到浏览器页面：
+   - 代码.py
+   - app_icon.png  
+   - README.md
+3. 在页面底部输入提交信息："添加项目文件"
+4. 点击 "Commit changes"
+
+### 第3步：创建构建脚本
+1. 回到仓库主页
+2. 点击 "Create new file"
+3. 在文件名框中输入：.github/workflows/build-mac.yml
+4. 复制 build-mac.yml 文件的全部内容并粘贴
+5. 滚动到底部，点击 "Commit changes"
+
+### 第4步：触发自动构建
+1. 点击仓库页面顶部的 "Actions" 标签
+2. 看到 "Build Mac App" 工作流
+3. 点击右侧的 "Run workflow" 按钮
+4. 在弹出框中再次点击绿色的 "Run workflow"
+
+### 第5步：等待构建完成
+- 🟡 黄色圆点 = 正在构建（约5-10分钟）
+- ✅ 绿色勾号 = 构建成功
+- ❌ 红色叉号 = 构建失败（检查日志）
+
+### 第6步：下载Mac应用
+1. 构建成功后，点击最新的构建记录
+2. 滚动到页面最底部
+3. 在 "Artifacts" 部分下载 "mac-app"
+4. 解压得到：
+   - 数据处理工具.app（约50-100MB）
+   - 数据处理工具_Mac版.dmg（约50-100MB）
+
+## 🎉 最终结果
+
+你将获得两个专业的Mac应用文件：
+
+### 🍎 数据处理工具.app
+- 这是真正的Mac应用程序
+- 双击即可运行，无需Python环境
+- 可以拖拽到Applications文件夹
+- 包含所有依赖，无需联网
+
+### 💿 数据处理工具_Mac版.dmg
+- 这是专业的Mac安装包
+- 双击后会挂载虚拟磁盘
+- 包含应用和安装说明
+- 可以直接发给Mac客户
+
+## ✨ 客户使用体验
+
+Windows客户：数据处理.exe（36MB）→ 双击运行
+Mac客户：数据处理工具.dmg（50-100MB）→ 双击安装 → 运行
+
+两个平台都实现了：
+- ✅ 无源码暴露
+- ✅ 无需Python环境  
+- ✅ 解压/安装即用
+- ✅ 专业软件体验
+
+## 🔧 故障排除
+
+### 构建失败？
+- 检查文件名是否正确
+- 确保仓库设置为Public
+- 查看构建日志中的错误信息
+
+### 无法下载？
+- 确保已登录GitHub
+- 等待构建完全完成（绿色勾号）
+- 刷新页面重试
+
+### Mac客户无法运行？
+客户需要：
+1. 右键点击应用 → 选择"打开"
+2. 在弹出对话框中点击"打开"
+3. 或者在"系统偏好设置"→"安全性与隐私"中允许
+
+## 🎯 总结
+
+通过GitHub Actions，你在Windows上就能：
+- 免费创建Mac专业应用
+- 获得.dmg专业安装包
+- 提供和Windows版本同等的客户体验
+- 完全无需Mac电脑！
+
+这就是云服务的强大之处！🌟
+
+---
+使用愉快！如有问题，可以查看GitHub仓库的Actions页面日志。 
